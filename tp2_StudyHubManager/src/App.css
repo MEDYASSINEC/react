@@ -63,6 +63,7 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-lg-center: 0 0 15px 1px rgba(0,0,0,0.1);
 }
 
 /* ============================================
@@ -233,6 +234,28 @@ body {
 /* ============================================
    FORMULAIRES
    ============================================ */
+
+.form-container {
+  background-color: var(--bg-secondary);
+  padding: 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg-center);
+  width: 500px;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-38vh,-30vw);
+  z-index: 1000;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+
 .form {
   display: flex;
   flex-direction: column;
@@ -283,7 +306,7 @@ body {
    BOUTONS
    ============================================ */
 .btn {
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-sm);
   border: none;
   border-radius: var(--radius-md);
   font-size: 1rem;
@@ -354,6 +377,18 @@ body {
   font-size: 1.125rem;
 }
 
+.btn-close-form {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #e2e8f0;
+  transition: color var(--transition-base);
+  padding: var(--spacing-sm);
+}
+
 .btn-icon {
   width: 40px;
   height: 40px;
@@ -366,6 +401,12 @@ body {
 /* ============================================
    TASK LIST
    ============================================ */
+
+.task-list-container {
+  margin: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  position: relative;
+}
 .task-list {
   display: flex;
   flex-direction: column;
@@ -388,11 +429,11 @@ body {
   box-shadow: var(--shadow-md);
 }
 
-.task-item.completed {
+.task-item.done {
   opacity: 0.6;
 }
 
-.task-item.completed .task-title {
+.task-item.done .task-title {
   text-decoration: line-through;
   color: var(--text-muted);
 }
@@ -408,7 +449,8 @@ body {
 .task-content {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   gap: var(--spacing-sm);
 }
 

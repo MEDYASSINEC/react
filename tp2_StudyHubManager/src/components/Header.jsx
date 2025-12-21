@@ -1,13 +1,14 @@
-import { useContext } from "react";
-import ThemeContext, { ThemeToggle } from "../context/ThemeContext";
+import { ThemeToggle } from "../context/ThemeContext";
 
 
 function Header() {
-//   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <header >
-      <ThemeToggle></ThemeToggle>
+    <header className="header">
+        <div className="header-content">
+            <h1 className="header-title">StudyHub Manager</h1>
+            <ThemeToggle></ThemeToggle>
+        </div>
     </header>
   );
 }
