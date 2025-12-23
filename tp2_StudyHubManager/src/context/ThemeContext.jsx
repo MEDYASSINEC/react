@@ -17,7 +17,8 @@ export const ThemeProvider = ({ children }) => {
   // Récupérer le thème sauvegardé ou utiliser 'light' par défaut
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
-    return savedTheme || 'light';
+    const systemPrefersTheme = window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";
+    return savedTheme || systemPrefersTheme || 'light';
   });
 
   // Appliquer le thème au chargement et à chaque changement

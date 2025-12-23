@@ -32,6 +32,7 @@ const TaskForm = React.memo(function TaskForm ( { displayForm, setDisplayForm, a
         };
 
         setTasks((prevTasks) => [...prevTasks, newTask]);
+        
 
         e.target.reset();
     }

@@ -5,6 +5,7 @@ import Panier from './components2/panier';
 import Profile from './components2/profile';
 import { Route, Routes } from 'react-router-dom';
 import ProductsContext from './components2/products-context';
+import CycleVie from './components2/cycleVieFonction';
 
 
 
@@ -38,14 +39,15 @@ function AppR() {
   };
   return (
     <ProductsContext.Provider value={{panier, tableData, supp_produit, ajouterAuPanier, ajouterProduit}}>
-      <div className="App">
+      {/* <div className="App">
         <h1>Gestion du stock du librairie</h1>
         <Routes>
           <Route path="/" element={<App2 />} />
           <Route path="/panier" element={<Panier panier={panier}/>} />
           <Route path="/profile" element={<Profile lenPanier={"hhh"} />} />
         </Routes>
-      </div>
+      </div> */}
+      <CycleVie></CycleVie>
     </ProductsContext.Provider>
   );
 }

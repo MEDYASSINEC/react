@@ -240,11 +240,19 @@ body {
   padding: 20px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg-center);
-  width: 500px;
   position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-38vh,-30vw);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 500px;
+}
+
+.position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 30%);
   z-index: 1000;
 }
 
@@ -300,6 +308,20 @@ body {
 .form-textarea {
   resize: vertical;
   min-height: 100px;
+}
+
+/* ============================================
+    FILTER FORM
+    ============================================ */
+.filter-form-input {
+  width: 30vw;
+}
+.filter-form-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--primary);
+  cursor: pointer;
+  margin: 0 4px;
 }
 
 /* ============================================
@@ -652,8 +674,25 @@ body {
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
 .fade-in {
   animation: fadeIn var(--transition-base) ease-out;
+  opacity: 1;
+}
+
+.fade-out {
+  animation: fadeOut var(--transition-base) ease-in;
+  opacity: 0;
 }
 
 @keyframes slideIn {
