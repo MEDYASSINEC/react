@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "titre": "Problème connexion",
+    "description": "Impossible de se connecter au système",
+    "priorite": "haute",
+    "status": "ouvert"
+  },
+  {
+    "id": 2,
+    "titre": "Bug affichage",
+    "description": "Les tickets ne s'affichent pas correctement",
+    "priorite": "moyenne",
+    "status": "en cours"
+  }
+]
