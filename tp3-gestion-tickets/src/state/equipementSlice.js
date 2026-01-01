@@ -17,14 +17,14 @@ const equipementSlice = createSlice({
             }
         },
         deleteEquipement: (state, action) => {
-            const index = state.findIndex(equipement => equipement.id === action.payload.id);
+            const index = state.findIndex(equipement => equipement.id === action.payload);
             if (index !== -1){
                 state.splice(index, 1);
                 saveEquipementToStorage(state);
             }
         }
     }
-})
+});
 
 export const { addEquipement, updateEquipement, deleteEquipement } = equipementSlice.actions;
 

@@ -1,16 +1,23 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import TicketsList from './component/tickets';
+import { Link, Route, Routes, useLocation } from 'react-router-dom';
+import GestionTickets from './component/tickets/gestionTickets';
+import GestionTechnicien from './component/techniciens/gestionTechniciens';
+import GestionEquipement from './component/equipements/gestionEquipement';
+import Accueil from './component/accueil';
+import { MdHome } from 'react-icons/md';
 
 function App() {
+  const location = useLocation();
+  
   return (
     <div className="App">
+      {location.pathname !== "/" && <Link to={"/"} className='goHome'><MdHome /></Link>}
       
       <Routes>
-        <Route path="/" element={<h1>Accueil</h1>} />
-        <Route path="/equipements" element={<h1>Gestion des équipements</h1>} />
-        <Route path="/tickets" element={<TicketsList />} />
-        <Route path="/detailsTicket" element={<h1>Détails d'un ticket</h1>} />
+        <Route path="/" element={<Accueil />} />
+        <Route path="/equipements" element={<GestionEquipement />} />
+        <Route path="/tickets" element={<GestionTickets />} />
+        <Route path="/technicien" element={<GestionTechnicien />} />
         <Route path="/tableauDeBord" element={<h1>Tableau de bord</h1>} />
       </Routes>
     </div>

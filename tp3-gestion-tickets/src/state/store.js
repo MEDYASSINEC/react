@@ -7,7 +7,7 @@ const store = configureStore({
     reducer: {
         tickets: ticketsReducer,
         technicien: technicienReducer,
-        equipement: equipementReducer
+        equipements: equipementReducer
     }
 });
 export { store };
