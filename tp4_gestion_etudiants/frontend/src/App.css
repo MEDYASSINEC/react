@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #4E56C0;
+    --secondary-color: #9B5DE0;
+    --container-pre-color: #D78FEE;
+    --container-sec-color: #FDCFFA;
+    --background-color: #f0f0f0;
+    --text-color: #333333;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    width: 100%;
+    height: 100vh;
+}
+
+.App {
+    padding: 20px;
+}
+
+.goHome {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: var(--primary-color);
+    transition: all 300ms;
+}
+
+.goHome:active {
+    color: var(--secondary-color);
+}
+
+.goHome:hover {
+    transform: scale(1.08) skew(5deg);
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.modal-desactive {
+    display: none;
+}
+
+.close-btn {
+    background: none;
+    color: red;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    align-self: flex-end;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close-btn:hover {
+    font-size: 1.5em;
+}
+
+.container-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.block-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px ;
+}
+
+
+.component-link {
+    height: 15vw;
+    width: 40vw;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.05);
+    transition: all 500ms;
+}
+
+.component-link:hover {
+    transform: scale(1.05);
+    background-color: var(--container-pre-color);
+}
+
+.title {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--container-sec-color);
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: var(--container-pre-color);
+    color: white;
+}
+
+
+.btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+}
+
+.editBtn {
+    background-color: rgb(4, 207, 4);
+    padding: 8px 7px 6px;
+    border-radius: 5px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.delBtn {
+    background-color: red;
+    padding: 8px 7px 6px;
+    border-radius: 5px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.form-container {
+    background-color: var(--container-sec-color);
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    position: relative;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.form-btn {
+    align-self: center;
+    width: fit-content;
+    padding: auto;
+}
+
+.btn-margin {
+    margin: 10px;
+}
+
+/* style de tableau de bord */
+.stats-container {
+    background-color: var(--container-sec-color);
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(173, 1, 173, 0.719);
+    transition: all 400ms;
+    width: 40%;
+}
+
+.stats-container:hover {
+    /* box-shadow: 0 0 2px 3px rgba(173, 1, 173, 0.425); */
+    transform: scale(1.05) translateX(13px);
+}
+
+.stat-title {
+    color: var(--secondary-color);
+    font-size: larger;
+    font-weight: 600;
+}

@@ -1,0 +1,11 @@
+{
+  "students": [
+    {
+      "id": "2005062300228",
+      "prenom": "Mohamed Yassine",
+      "nom": "Chliah",
+      "niveau": "S3",
+      "dateInscription": "2026-01-09"
+    }
+  ]
+}
